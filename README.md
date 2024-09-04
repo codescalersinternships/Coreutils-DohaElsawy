@@ -3,6 +3,8 @@ re-implementing the Coreutils using golang
 
 ## Description
 Goal is to reimplement several core Unix utilities. giving exposure to Go basics, including file I/O, flag parsing, string manipulation, and more.
+> [!WARNING]
+> to be able to build and run these following commands you have to be in ./cmd/<< command >>/
 ## 1. head
 * Print the first 10 lines of input by default.
 * Add a ``-n`` flag to specify the number of lines to print.
