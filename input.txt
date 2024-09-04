@@ -9,11 +9,3 @@ Hello Cone
 Hello Hanje
 Hello Eren
 this line should not be displayed
-
-
-i made the following changes:
-- modified project structure
--changed error handling
--used linter package
--used flag.typeVar insted of flag.type -> https://github.com/codescalersinternships/Coreutils-DohaElsawy/pull/1
-waiting for your opinion
