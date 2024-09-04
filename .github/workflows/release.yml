@@ -39,6 +39,6 @@ jobs:
           # build_flags: -tags 5BytesOffset # optional, default is
           ldflags: -s -w -extldflags -static -X github.com/seaweedfs/seaweedfs/weed/util.COMMIT=${{github.sha}}
           # Where to run `go build .`
-          project_path: weed
-          binary_name: weed
+          project_path: cmd
+          binary_name: cmd
           asset_name: "${{ matrix.goos }}_${{ matrix.goarch }}_full"
