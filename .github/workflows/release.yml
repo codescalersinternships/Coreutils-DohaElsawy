@@ -1,17 +1,26 @@
-# /.github/workflows/release.yaml
+# .github/workflows/release.yaml
+
+name: "go: build versioned binaries for linux with all tags"
 
 on:
-  release:
-    types: [created]
+  push:
+    tags:
+      - '*'
+
+  workflow_dispatch:
 
 permissions:
-  contents: write
-  packages: write
+  contents: read
 
 jobs:
-  release-linux-amd64:
-    name: release linux/amd64
+  build-release-binaries_linux:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        goos: [ linux ]
+        goarch: [ amd64 ]
     steps:
       - uses: actions/checkout@v4
       - uses: wangyoucao577/go-release-action@v1
@@ -19,3 +28,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           goos: linux
           goarch: amd64
+          project_path: cmd
+          binary_name: cmd
