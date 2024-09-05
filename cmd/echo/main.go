@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	cmd "github.com/dohaelsawy/coreutils/internal"
+	cmd "github.com/dohaelsawy/codescalers/coreutils/internal"
 	"strings"
 )
 

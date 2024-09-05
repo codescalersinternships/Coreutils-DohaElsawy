@@ -1,7 +1,7 @@
 package main
 
 import (
-	cmd "github.com/dohaelsawy/coreutils/internal"
+	cmd "github.com/dohaelsawy/codescalers/coreutils/internal"
 	"os"
 	"strings"
 )

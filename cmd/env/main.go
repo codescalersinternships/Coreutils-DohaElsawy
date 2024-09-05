@@ -3,7 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
-	cmd "github.com/dohaelsawy/coreutils/internal"
+	cmd "github.com/dohaelsawy/codescalers/coreutils/internal"
 	"log"
 	"os"
 )
