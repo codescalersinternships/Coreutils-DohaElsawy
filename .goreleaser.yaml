@@ -22,42 +22,52 @@ builds:
       - linux
     
   - main: ./cmd/cat
+    id: "cli/cat/1"
     binary: cli-cat
     goos:
       - linux
   - main: ./cmd/echo
+    id: "cli/echo/1"
     binary: cli-echo
     goos:
       - linux
   - main: ./cmd/env
+    id: "cli/env/1"
     binary: cli-env
     goos:
       - linux
   - main: ./cmd/false
+    id: "cli/false/1"
     binary: cli-false
     goos:
       - linux
   - main: ./cmd/head
+    id: "cli/head/1"
     binary: cli-head
     goos:
       - linux
   - main: ./cmd/tail
+    id: "cli/tail/1"
     binary: cli-tail
     goos:
       - linux
   - main: ./cmd/tree
+    id: "cli/tree/1"
     binary: cli-tree
     goos:
       - linux
   - main: ./cmd/true
+    id: "cli/true/1"
     binary: cli-true
     goos:
       - linux
   - main: ./cmd/wc
+    id: "cli/wc/1"
     binary: cli-wc
     goos:
       - linux
   - main: ./cmd/yes
+    id: "cli/yes/1"
     binary: cli-yes
     goos:
       - linux
