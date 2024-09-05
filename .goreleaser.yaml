@@ -23,16 +23,76 @@ builds:
       - windows
       - darwin
     
-    main: ./cmd/cat
-    main: ./cmd/echo
-    main: ./cmd/env
-    main: ./cmd/false
-    main: ./cmd/head
-    main: ./cmd/tail
-    main: ./cmd/tree
-    main: ./cmd/true
-    main: ./cmd/wc
-    main: ./cmd/yes
+  - main: ./cmd/cat
+    id: "cli/cat"
+    binary: cli-cat
+    goos:
+      - linux
+      - darwin
+      - windows
+  - main: ./cmd/echo
+    id: "cli/echo"
+    binary: cli-echo
+    goos:
+      - linux
+      - darwin
+      - windows
+  - main: ./cmd/env
+    id: "cli/env"
+    binary: cli-env
+    goos:
+      - linux
+      - darwin
+      - windows
+  - main: ./cmd/false
+    id: "cli/false"
+    binary: cli-false
+    goos:
+      - linux
+      - darwin
+      - windows
+  - main: ./cmd/head
+    id: "cli/head"
+    binary: cli-head
+    goos:
+      - linux
+      - darwin
+      - windows
+  - main: ./cmd/tail
+    id: "cli/tail"
+    binary: cli-tail
+    goos:
+      - linux
+      - darwin
+      - windows
+  - main: ./cmd/tree
+    id: "cli/tree"
+    binary: cli-tree
+    goos:
+      - linux
+      - darwin
+      - windows
+  - main: ./cmd/true
+    id: "cli/true"
+    binary: cli-true
+    goos:
+      - linux
+      - darwin
+      - windows
+  - main: ./cmd/wc
+    id: "cli/wc"
+    binary: cli-wc
+    goos:
+      - linux
+      - darwin
+      - windows
+  - main: ./cmd/yes
+    id: "cli/yes"
+    binary: cli-yes
+    goos:
+      - linux
+      - darwin
+      - windows
 
 archives:
   - format: tar.gz
