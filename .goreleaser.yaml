@@ -22,6 +22,17 @@ builds:
       - linux
       - windows
       - darwin
+    
+    main: ./cmd/cat
+    main: ./cmd/echo
+    main: ./cmd/env
+    main: ./cmd/false
+    main: ./cmd/head
+    main: ./cmd/tail
+    main: ./cmd/tree
+    main: ./cmd/true
+    main: ./cmd/wc
+    main: ./cmd/yes
 
 archives:
   - format: tar.gz
