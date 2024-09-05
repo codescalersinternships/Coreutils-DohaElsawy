@@ -16,65 +16,59 @@ before:
     - go generate ./...
 
 builds:
-  - env:
-      - CGO_ENABLED=0
-    goos:
-      - linux
-    
   - main: ./cmd/cat
-    id: "cli/cat/1"
+    id: "cli/cat/-"
     binary: cli-cat
     goos:
       - linux
   - main: ./cmd/echo
-    id: "cli/echo/1"
+    id: "cli/echo/-"
     binary: cli-echo
     goos:
       - linux
   - main: ./cmd/env
-    id: "cli/env/1"
+    id: "cli/env/-"
     binary: cli-env
     goos:
       - linux
   - main: ./cmd/false
-    id: "cli/false/1"
+    id: "cli/false/-"
     binary: cli-false
     goos:
       - linux
   - main: ./cmd/head
-    id: "cli/head/1"
+    id: "cli/head/-"
     binary: cli-head
     goos:
       - linux
   - main: ./cmd/tail
-    id: "cli/tail/1"
+    id: "cli/tail/-"
     binary: cli-tail
     goos:
       - linux
   - main: ./cmd/tree
-    id: "cli/tree/1"
+    id: "cli/tree/-"
     binary: cli-tree
     goos:
       - linux
   - main: ./cmd/true
-    id: "cli/true/1"
+    id: "cli/true/-"
     binary: cli-true
     goos:
       - linux
   - main: ./cmd/wc
-    id: "cli/wc/1"
+    id: "cli/wc/-"
     binary: cli-wc
     goos:
       - linux
   - main: ./cmd/yes
-    id: "cli/yes/1"
+    id: "cli/yes/-"
     binary: cli-yes
     goos:
       - linux
 
 archives:
   - format: binary
-    # this name template makes the OS and Arch compatible with the results of `uname`.
     name_template: >-
       {{ .ProjectName }}_
       {{- title .Os }}_
