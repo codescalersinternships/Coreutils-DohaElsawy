@@ -22,25 +22,29 @@ func main() {
 
 	flag.Parse()
 	args := flag.Args()
+	
 	if len(args) > 0 {
 		filePath := args[0]
 		data, err := os.ReadFile(filePath)
+	
 		if err != nil {
 			log.Fatal(ErrTxtNotFound)
 		}
+	
 		lines, words, chars := cmd.WC(l, w, c, string(data))
+	
 		if !l && !w && !c {
 			fmt.Println(lines, words, chars)
-		} else {
-			if l {
-				fmt.Println(lines)
-			}
-			if w {
-				fmt.Println(words)
-			}
-			if c {
-				fmt.Println(chars)
-			}
+			return
+		} 
+		if l {
+			fmt.Println(lines)
+		}
+		if w {
+			fmt.Println(words)
+		}
+		if c {
+			fmt.Println(chars)
 		}
 
 	}

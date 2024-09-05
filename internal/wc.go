@@ -16,6 +16,5 @@ func LineCount(input string) int {
 }
 
 func WC(l, w, c bool, input string) (int, int, int) {
-
 	return LineCount(input), WordCount(input), CharCount(input)
 }

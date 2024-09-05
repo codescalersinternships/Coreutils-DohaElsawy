@@ -13,9 +13,11 @@ var (
 )
 
 func main() {
+	
 	if len(os.Environ()) < 1 {
 		log.Fatal(ErrNoEnv)
 	}
+
 	envList := cmd.Env()
 	fmt.Println(envList)
 }

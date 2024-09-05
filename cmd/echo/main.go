@@ -12,6 +12,7 @@ var (
 )
 
 func main() {
+
 	flag.BoolVar(&n, "n", false, "omit the trailing newline")
 	flag.Parse()
 	args := flag.Args()
@@ -19,7 +20,8 @@ func main() {
 	if len(args) > 0 {
 		output := cmd.Echo(n, strings.Join(args, " "))
 		fmt.Println(output)
-	} else {
-		fmt.Println(" ")
-	}
+		return
+	} 
+	
+	fmt.Println(" ")
 }
