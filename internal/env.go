@@ -1,15 +1,14 @@
 package internal
 
 import (
+	"fmt"
 	"os"
 )
 
-func Env() []string {
-	var envOutput []string
-	
+func Env() {
+
 	for _, env := range os.Environ() {
-		envOutput = append(envOutput, env+"\n")
+		fmt.Println(env)
 	}
-	
-	return envOutput
+
 }

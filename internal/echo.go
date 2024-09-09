@@ -4,11 +4,12 @@ import (
 	"strings"
 )
 
-func Echo(n bool, input string) string {
-	
+func Echo(n bool, input []string) string {
+	ans := strings.Join(input, " ")
+
 	if n {
-		return strings.Replace(input, "\r\n", "", -1)
+		return ans
 	}
-	
-	return input
+	ans += "\n"
+	return ans
 }
